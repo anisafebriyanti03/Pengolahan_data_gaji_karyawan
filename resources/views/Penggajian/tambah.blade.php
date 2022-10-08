@@ -125,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Jumlah Alfa</label>
-                            <input type="number" name="jumlah_alfa" id="jumlah_alfa" onchange="totalGaji()" class="form-control" placeholder="Alfa">
+                            <input type="number" name="jumlah_alfa" id="jumlah_alfa" onchange="Pengurangan()" class="form-control" placeholder="Alfa">
  
                             @if($errors->has('jumlah_alfa'))
                                 <div class="text-danger">
@@ -189,7 +189,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Pengurangan</label>
-                            <input type="number" name="pengurangan" id="pengurangan" class="form-control" onchange="totalGaji()" placeholder="Pengurangan">
+                            <input type="number" name="pengurangan" id="total_alfa" class="form-control" onchange="totalGaji()" placeholder="Pengurangan">
  
                             @if($errors->has('pengurangan'))
                                 <div class="text-danger">
@@ -271,6 +271,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         total = total + bonus - pengurangan - alfa
 
         $('#total').val(total)
+    }
+
+    function Pengurangan() {
+        var tes = document.getElementById('jumlah_alfa').value;
+                    document.getElementById("total_alfa").value=tes;
     }
 
     function getTotalHadir(alfa) {
