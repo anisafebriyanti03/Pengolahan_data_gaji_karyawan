@@ -121,12 +121,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <td>{{ $i+1 }}</td>
                                                         <td>{{ $p->penggajian->nip ?? '' }}</td>
                                                         <td>{{ $p->penggajian->karyawan->nama }}</td>
-                                                        <td>{{ $p->penggajian->bonus ?? '' }}</td>
+                                                        <td>Rp.{{ number_format($p->penggajian->bonus ?? '') }}</td>
                                                         <td>{{ $p->penggajian->pengurangan ?? '' }}</td>
                                                         <td>{{ $p->jenis_gaji->nama  ?? '' }}</td>
-                                                        <td>{{ $p->nominal }}</td>
-                                                        <td>{{ $p->penggajian->total ?? '' }}</td>
-
+                                                        <td>Rp.{{ number_format($p->nominal) }}</td>
+                                                        <td>Rp.{{ number_format($p->penggajian->total ?? '') }}</td>
                                                         <!-- <td style="text-align:center;">
                                                             <a href="/penggajian_detail/delete/{{ $p->id_detail}}/{{ $p->penggajian }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                                         </td> -->
