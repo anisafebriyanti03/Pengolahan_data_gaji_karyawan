@@ -83,13 +83,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
 
                             <div class="mb-3 row">
-                              <label for="jumlah_hadir" class="col-sm-2 col-form-label">Jumlah Hadir</label>
-                                <div class="col-sm-10">
-                                <b>:</b> {{ $penggajian->jumlah_hadir }}
-                                </div>
-                            </div>
-
-                            <div class="mb-3 row">
                               <label for="jumlah_izin" class="col-sm-2 col-form-label">Jumlah Izin</label>
                                 <div class="col-sm-10">
                                 <b>:</b> {{ $penggajian->jumlah_izin }}
@@ -111,6 +104,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
 
                             <div class="mb-3 row">
+                              <label for="jumlah_hadir" class="col-sm-2 col-form-label">Jumlah Hadir</label>
+                                <div class="col-sm-10">
+                                <b>:</b> {{ $penggajian->jumlah_hadir }}
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
                               <label for="bonus" class="col-sm-2 col-form-label">Bonus</label>
                                 <div class="col-sm-10">
                                 <b>:</b> Rp.{{ number_format($penggajian->bonus) }}
@@ -127,7 +127,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="mb-3 row">
                               <label for="pengurangan" class="col-sm-2 col-form-label">Pengurangan</label>
                                 <div class="col-sm-10">
-                                <b>:</b> {{ $penggajian->pengurangan }}
+                                <b>:</b> Rp.{{ number_format($penggajian->pengurangan) }}
                                 </div>
                             </div>
 

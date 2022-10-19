@@ -1,5 +1,5 @@
 @section("menu","mainmenu")
-@section("submenu","penggajian")
+@section("submenu","penggajian_detail")
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -90,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <button type="submit" class="btn btn-sm btn-success float-right"><i class="fa fa-plus"></i> Add</button> -->
                                 <div class="container">
-                                    <div class="card   card-primary card-outline mt-4">
+                                    <div class="card card-primary card-outline mt-4">
                                         <!-- <div class="card-header text-center">
                                             Tabel Penggajian
                                         </div> -->
@@ -107,7 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <tr class="table-primary">
                                                         <th>No</th>
                                                         <th>NIP</th>
-                                                        <th>Nama</th>
+                                                        <th>NAMA</th>
                                                         <th>Bonus</th>
                                                         <th>Pengurangan</th>
                                                         <th>Jenis  Gaji</th>
@@ -121,11 +121,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <td>{{ $i+1 }}</td>
                                                         <td>{{ $p->penggajian->nip ?? '' }}</td>
                                                         <td>{{ $p->penggajian->karyawan->nama }}</td>
-                                                        <td>Rp.{{ number_format($p->penggajian->bonus ?? '') }}</td>
+                                                        <td>{{ $p->penggajian->bonus ?? '' }}</td>
                                                         <td>{{ $p->penggajian->pengurangan ?? '' }}</td>
                                                         <td>{{ $p->jenis_gaji->nama  ?? '' }}</td>
-                                                        <td>Rp.{{ number_format($p->nominal) }}</td>
-                                                        <td>Rp.{{ number_format($p->penggajian->total ?? '') }}</td>
+                                                        <td>{{ $p->nominal }}</td>
+                                                        <td>{{ $p->penggajian->total ?? '' }}</td>
                                                         <!-- <td style="text-align:center;">
                                                             <a href="/penggajian_detail/delete/{{ $p->id_detail}}/{{ $p->penggajian }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                                         </td> -->

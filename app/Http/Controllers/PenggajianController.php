@@ -43,10 +43,15 @@ class PenggajianController extends Controller
 
     public function store(Request $request)
     {
-           
+          
+        $message = ([
+            'required' =>  "Data Tidak Boleh Kosong!",
+            'unique' => "ID Sudah Terdata"
+        ]);
+
         $this->validate($request,[
            
-            'nip' => 'required',
+            'nip' => 'required|unique:penggajian,nip',
             'jumlah_hadir' => 'required|numeric',
             'jumlah_izin' => 'required|numeric',
             'jumlah_sakit' => 'required|numeric',
@@ -56,7 +61,7 @@ class PenggajianController extends Controller
              'pengurangan' => 'nullable',
              'keterangan_pengurangan' => 'nullable',
              'total' => 'required'
-        ]);
+        ], $message);
        
         $insert = Penggajian::create([
           

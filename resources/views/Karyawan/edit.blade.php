@@ -21,13 +21,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-        @if($errors->any())
+        <!-- @if($errors->any())
           @foreach($errors->all() as $error)
             <div class="alert alert-danger" role="alert">
               {{$error}}
             </div>
           @endforeach
-        @endif
+        @endif -->
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">

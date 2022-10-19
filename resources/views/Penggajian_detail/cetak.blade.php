@@ -1,5 +1,3 @@
-cetak gaji bentuk table 
-
 @section("menu","mainmenu")
 @section("submenu","penggajian")
 <!DOCTYPE html>

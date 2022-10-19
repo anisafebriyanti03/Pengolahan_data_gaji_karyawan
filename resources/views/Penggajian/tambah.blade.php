@@ -25,8 +25,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Data Penggajian</h1>
+          <div class="col-sm-12">
+            <h1 class="m-0"><center>Data Penggajian</center> </h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -189,7 +189,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Pengurangan</label>
-                            <input type="number" name="pengurangan" id="total_alfa" class="form-control" onchange="totalGaji()" placeholder="Pengurangan">
+                            <input type="number" name="pengurangan" id="pengurangan" class="form-control" onchange="totalGaji()" placeholder="Pengurangan">
  
                             @if($errors->has('pengurangan'))
                                 <div class="text-danger">
@@ -266,12 +266,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         getTotalHadir(alfa);
             alfa = alfa === '' ? 0 : parseInt(alfa);
             alfa *= 50000;
-
+        
+        $('#pengurangan').val(alfa);
 
         total = total + bonus - pengurangan - alfa
 
         $('#total').val(total)
     }
+
 
 
     function getTotalHadir(alfa) {

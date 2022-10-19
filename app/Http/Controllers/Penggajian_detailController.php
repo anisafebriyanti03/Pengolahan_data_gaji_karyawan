@@ -13,10 +13,10 @@ class Penggajian_detailController extends Controller
 {
     public function index($id)
     {
-        $penggajian = Penggajian::all();
+        $penggajian = Penggajian::where('id_penggajian',$id)->get();
         $jenis_gaji = Jenis_gaji::all();
     	$penggajian_detail = Penggajian_detail::where('id_penggajian',$id)->get();
-    	return view('penggajian_detail.index',compact('penggajian','jenis_gaji','penggajian_detail','id'));
+        return view('penggajian_detail.index',compact('penggajian','jenis_gaji','penggajian_detail','id'));
     }
 
     public function cetakPegawai($id_penggajian)

@@ -94,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $p->jumlah_alfa }}</td>
                                 <td>Rp.{{ number_format($p->jumlah_alfa *= 50000) }}</td>
                                 <td>Rp.{{ number_format($p->bonus) }}</td>
-                                <td>Rp.{{ number_format($p->total - $p->jumlah_alfa) }} </td>
+                                <td>Rp.{{ number_format($p->total) }} </td>
                                 <td style="text-align:center;">
                                     <!-- <a href="/penggajian_detail/penggajian/{{ $p->id_penggajian}}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> </a> -->
                                     <a href="/penggajian_detail/penggajian/{{ $p->id_penggajian}}" class="btn btn-sm btn-info"><i class="fa fa-print"></i></a>

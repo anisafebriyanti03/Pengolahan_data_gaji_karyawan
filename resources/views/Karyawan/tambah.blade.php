@@ -125,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea name="alamat" class="form-control" placeholder="Alamat" value="{{old('alamat')}}"></textarea>
+                            <textarea name="alamat" class="form-control" placeholder="Alamat">{{old('alamat')}}</textarea>
  
                              @if($errors->has('alamat'))
                                 <div class="text-danger">

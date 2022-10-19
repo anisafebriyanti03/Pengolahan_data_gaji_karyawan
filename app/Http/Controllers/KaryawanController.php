@@ -28,6 +28,10 @@ class KaryawanController extends Controller
 
     public function store(Request $request)
     {
+        $message = ([
+            'required' => "Data Tidak Boleh Kosong!",
+        ]);
+
         $this->validate($request,[
             'nip' => 'required|integer|unique:karyawan,nip',
             'id_jabatan' => 'required',
@@ -41,7 +45,7 @@ class KaryawanController extends Controller
             'email' => 'required',
             'tgl_masuk' => 'required',
             'tgl_resign' => 'nullable|after:tgl_masuk'
-        ]);
+        ], $message);
 
         Karyawan::create([
             'nip' => $request->nip,
@@ -78,6 +82,10 @@ class KaryawanController extends Controller
     public function update(Request $request, $id)
     {
         // dd($request->all());
+        $message = ([
+            'required' => "Data Tidak Boleh Kosong!",
+        ]);
+
         $this->validate($request,[
             'nip' => 'disable',
             'id_jabatan' => 'required',
@@ -91,7 +99,7 @@ class KaryawanController extends Controller
             'email' => 'required|email',
             'tgl_masuk' => 'required',
             'tgl_resign' => 'nullable|after:tgl_masuk'
-        ]);
+        ], $message);
     
         Karyawan::where('nip',$id)->update([
             'nip' => $request->nip,
