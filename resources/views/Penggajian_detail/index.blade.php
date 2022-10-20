@@ -100,8 +100,56 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <a href="/penggajian" class="btn btn-sm btn-success mb-3">Kembali</a>
                                                     <br/>
                                                 </div>
-                                        
+                                        <table>
+                                            <tr>
+                                                <td>Nama</td>
+                                                <td>:</td>
+                                                <td>{{$arrayResult[0]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>NIP</td>
+                                                <td>:</td>
+                                                <td>{{$arrayResult[1]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bonus Gaji</td>
+                                                <td>:</td>
+                                                <td>{{$arrayResult[2]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pengurangan Gaji</td>
+                                                <td>:</td>
+                                                <td>{{$arrayResult[3]}}</td>
+                                            </tr>
+                                        </table>
                                         <!-- seacrch -->
+                                        <table class="table table-bordered table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>NO.</th>
+                                                    <th>Keterangan</th>
+                                                    <th>Nominal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php 
+                                                    $no = 1;
+                                                    $getData = $arrayResult[5];
+                                                ?>
+                                                @foreach ($getData as $value)
+                                                        <tr>
+                                                            <td>{{$no++}}</td>
+                                                            <td>{{$value['jenis_gaji']}}</td>
+                                                            <td>{{$value['nominal']}}</td>
+                                                        </tr>
+                                                @endforeach
+                                                <tr>
+                                                    <td colspan="2">Total</td>
+                                                    <td>{{$arrayResult[4]}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--
                                             <table class="table table-bordered table-hover table-striped">
                                                 <thead>
                                                     <tr class="table-primary">
@@ -126,13 +174,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <td>{{ $p->jenis_gaji->nama  ?? '' }}</td>
                                                         <td>{{ $p->nominal }}</td>
                                                         <td>{{ $p->penggajian->total ?? '' }}</td>
-                                                        <!-- <td style="text-align:center;">
+                                                         <td style="text-align:center;">
                                                             <a href="/penggajian_detail/delete/{{ $p->id_detail}}/{{ $p->penggajian }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
-                                                        </td> -->
+                                                        </td> 
                                                     </tr>
                                                     @endforeach
                                                 </tbody>
-                                            </table>
+                                            </table> -->
                                         </div>
                                     </div>
                                 </div>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Penggajian_detail;
 use App\Jenis_gaji;
 use App\Penggajian;
-// use App\Karyawan;
+use App\Karyawan;
 
 
 class Penggajian_detailController extends Controller
@@ -16,7 +16,38 @@ class Penggajian_detailController extends Controller
         $penggajian = Penggajian::where('id_penggajian',$id)->get();
         $jenis_gaji = Jenis_gaji::all();
     	$penggajian_detail = Penggajian_detail::where('id_penggajian',$id)->get();
-        return view('penggajian_detail.index',compact('penggajian','jenis_gaji','penggajian_detail','id'));
+        $karyawan = Karyawan::where('');
+
+        // var_dump($penggajian_detail);
+        $details = [];
+        $nama_karyawan = "";
+        $nip_karyawan = "";
+        $bonus_karyawan = "";
+        $pengurangan_gaji = "";
+        $total_gaji = "";
+        $dataPenggajian = [];
+        foreach($penggajian_detail as $pd => $p) {
+            $nama_karyawan = $details[$pd]['nama'] = $p->penggajian->karyawan->nama ?? '';
+            $nip_karyawan = $details[$pd]['nip'] = $p->penggajian->nip ?? '';
+            $bonus_karyawan = $details[$pd]['bonus'] = $p->penggajian->bonus ?? '';
+            $pengurangan_gaji = $details[$pd]['pengurangan'] = $p->penggajian->pengurangan ?? 0;
+            $total_gaji = $details[$pd]['total'] = $p->penggajian->total ?? 0;
+
+            $dataPenggajian[$pd] = ['jenis_gaji' => $details[$pd]['jenis_gaji'] = $p->jenis_gaji->nama  ?? '', 'nominal' => $details[$pd]['nominal'] = $p->nominal  ?? ''];
+        }
+
+
+        $arrayResult = 
+            [
+                $nama_karyawan,
+                $nip_karyawan,
+                $bonus_karyawan,
+                $pengurangan_gaji,
+                $total_gaji,
+                $dataPenggajian
+            ];
+
+        return view('penggajian_detail.index',compact('penggajian','jenis_gaji','penggajian_detail','id','details','arrayResult'));
     }
 
     public function cetakPegawai($id_penggajian)
@@ -25,6 +56,7 @@ class Penggajian_detailController extends Controller
         // $karyawan = Karyawan::all();
         $jenis_gaji = Jenis_gaji::all();
     	$penggajian_detail = Penggajian_detail::where('id_penggajian',$id_penggajian)->get();
+        
     	return view('penggajian_detail.cetak',compact('penggajian_detail', 'penggajian','jenis_gaji'));
         
     }
