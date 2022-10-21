@@ -31,7 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Detail Jabatan</h1>
+            <h1 class="m-0 font-weight-light">Detail Jabatan</h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -47,7 +47,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="container">
-            <div class="card  card-primary card-outline mt-3">
+            <div class="card  card-olive card-outline mt-3">
             <!-- <div class="card-header mt-2">
                     <div class="pull-left">
                       <strong><h5>Detail Jabatan</h5></strong>
@@ -114,11 +114,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
           {{session('Data terhapus')}}
         </div>
     @endif
-            <div class="card card-primary card-outline mt-5">
+            <div class="card card-olive card-outline mt-5">
                 <div class="card-body"><br/>
-                    <table class="table table-bordered table-hover table-striped">
+                    <table class="table table-bordered table-hover table-striped ">
                         <thead>
-                            <tr class="table-primary">
+                            <tr class="table-secondary">
                                 <th>No</th>
                                 <!-- <th> Nama Jabatan</th> -->
                                 <th> Jenis Gaji</th>
@@ -137,7 +137,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <!-- <a href="/jabatan_detail/detail/{{ $p->id}}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a> -->
                                     <!-- <a href="/jabatan_detail/edit/{{ $p->id}}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a> -->
                                     <!-- <a href="/jabatan_detail/delete/{{ $p->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a> -->
-                                    <a href="/jabatan_detail/delete/{{ $p->id}}/{{ $p->id_jabatan }}" class="btn btn-sm btn-danger" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
+                                    <a href="/jabatan_detail/delete/{{ $p->id}}/{{ $p->id_jabatan }}" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Hapus" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach

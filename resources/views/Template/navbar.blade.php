@@ -1,4 +1,4 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light shadow">
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -121,6 +121,22 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li> -->
+      <li class="nav-item dropdown" data-toggle="tooltip" title="Logout">
+      <a href="{{route('logout')}}" class="nav-link" onClick="return confirm('Apakah anda yakin ingin keluar?')">
+            Logout
+      </a>
+    
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <div class="dropdown-divider"></div>
+          <a href="{{route('logout')}}" class="nav-link" onClick="return confirm('Apakah anda yakin ingin keluar?')">
+            <!-- <i class="nav-icon fas fa-th"></i> -->
+            <i class="nav-icon fas fa-outdent"></i>
+            <p>
+              Logout
+            </p>
+          </a>
+      </div>
+    </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>

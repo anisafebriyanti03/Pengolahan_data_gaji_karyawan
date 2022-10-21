@@ -1,8 +1,8 @@
-<aside class="main-sidebar sidebar-dark-lightblue elevation-4">
+<aside class="main-sidebar sidebar-light-olive elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{asset('gambar/stempel SMK.png')}}" alt="smki" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">SMKI UTAMA</span>
+      <!-- <img src="{{asset('gambar/stempel SMK.png')}}" alt="smki" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
+      <marquee class="brand-text font-weight-light"><font color="#3d9970">PT KREASI SEJAHTERA TEKNOLOGI</font></marquee>
     </a>
 
     <!-- Sidebar -->
@@ -12,7 +12,7 @@
         <!-- <div class="image">
           <img src="{{asset('gambar/hay.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div> -->
-        <div class="info">
+        <div class="info" >
           <a href="#" class="d-block">Admin</a>
         </div>
       </div>
@@ -52,7 +52,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+              <li class="nav-item" >
                 <a href="{{route('jenis_gaji')}}" class="nav-link {{ e($__env->yieldContent('submenu')) =='jenis_gaji' ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon text-success"></i>
                   <p>Jenis Gaji</p>
@@ -86,24 +86,15 @@
                 </a>
               </li>
             </ul>
-            <!-- <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('penggajian_detail')}}" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Penggajian Detail</p>
-                </a>
-              </li>
-            </ul> -->
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{{route('logout')}}" class="nav-link" onClick="return confirm('Apakah anda yakin ingin keluar?')">
-              <!-- <i class="nav-icon fas fa-th"></i> -->
               <i class="nav-icon fas fa-outdent"></i>
               <p>
                 Logout
               </p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

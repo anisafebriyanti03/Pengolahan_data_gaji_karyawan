@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Jenis Gaji</h1>
+            <!-- <h1 class="m-0">Jenis Gaji</h1> -->
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -44,8 +44,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container">
             <div class="card mt-4">
             <div class="card-header">
-                    <div class="col-6">
-                      <strong><h5>Edit Data</h5></strong>
+                    <div class="pull-left">
+                      <strong><h5><center>Edit Data Jenis Gaji</center></h5></strong>
                     </div>
                   </div>
                 <div class="card-body">

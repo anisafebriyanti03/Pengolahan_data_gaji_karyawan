@@ -42,10 +42,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
         <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-9">
             <div class="card mt-4 ">
             <div class="card-header">
                     <div class="pull-left">
-                      <strong><h5>Detail Penggajian</h5></strong>
+                      <strong><h5><center>Detail Data Penggajian</center></h5></strong>
                     </div>
                 </div>
                 <div class="card-body">
@@ -151,6 +153,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </form>
                 </div>
             </div>
+            </div>
+          </div>
         </div>
 
 

@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Jenis Gaji</h1>
+            <h1 class="m-0 font-weight-light">Data Jenis Gaji</h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -59,19 +59,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
         <div class="container">
-            <div class="card card-primary card-outline mt-3">
+            <div class="card card-olive card-outline mt-3">
                 <!-- <div class="card-header mt-2">
                     <div class="pull-left">
                       <strong><h5>Jenis Gaji</h5></strong>
                     </div>
                   </div> -->
                 <div class="card-body">
-                    <a href="/jenis_gaji/tambah" class="btn btn-sm btn-primary float-left"><i class="fa fa-plus"></i>  Add</a>
+                    <a href="/jenis_gaji/tambah" class="btn btn-sm btn-primary float-left"><i class="fa fa-plus"></i>  Tambah</a>
                     <br/>
                     <br/>
-                    <table class="table table-bordered table-hover table-striped">
+                    <table class="table table-bordered table-hover table-striped ">
                         <thead>
-                            <tr class="table-primary">
+                            <tr class="table-secondary">
                                 <th>No</th>
                                 <th>Nama</th>
                                 <th colspan="3" style="text-align:center;">OPSI</th>
@@ -83,8 +83,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $i+1 }}</td>
                                 <td>{{ $p->nama }}</td>
                                 <td style="text-align:center;">
-                                    <a href="/jenis_gaji/edit/{{ $p->id_jenis_gaji}}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                                    <a href="/jenis_gaji/delete/{{ $p->id_jenis_gaji}}" class="btn btn-sm btn-danger" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
+                                    <a href="/jenis_gaji/edit/{{ $p->id_jenis_gaji}}" class="btn btn-sm btn-warning" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></a>
+                                    <a href="/jenis_gaji/delete/{{ $p->id_jenis_gaji}}" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Hapus" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach

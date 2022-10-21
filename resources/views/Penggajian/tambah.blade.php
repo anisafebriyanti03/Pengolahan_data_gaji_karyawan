@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-12">
-            <h1 class="m-0"><center>Data Penggajian</center> </h1>
+            <!-- <h1 class="m-0"><center>Data Penggajian</center> </h1> -->
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -45,7 +45,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card mt-3">
             <div class="card-header">
                     <div class="pull-left">
-                      <strong><h5>Tambah Data</h5></strong>
+                      <strong><h5><center>Tambah Data</center></h5></strong>
                     </div>
                   </div>
                 <div class="card-body">
@@ -69,17 +69,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             @endif
                         </div> 
-                        
-                        <!-- <div class="form-group">
-                            <label for="id_penggajian">Id Penggajian</label>
-                            <input type="number" name="id_penggajian" class="form-control" placeholder="Masukan id">
-                            @if($errors->has('id_penggajian'))
-                                <div class="text-danger">
-                                    {{ $errors->first('id_penggajian')}}
-                                </div>
-                            @endif
-                        </div> -->
 
+                        <div>
                         <div class="form-group">
                             <label>Bulan Penggajian</label>
                             {{ date ("F", time()) }}
@@ -91,7 +82,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @endif
                         </div>
 
-
                         <div class="form-group">
                             <label>Tahun penggajian</label>
                             {{ date ("Y", time()) }}
@@ -101,6 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             @endif
                         </div>
+                        
 
                         <div class="form-group">
                             <label>Jumlah Izin</label>

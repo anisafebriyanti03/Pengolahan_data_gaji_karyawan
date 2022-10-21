@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Karyawan</h1>
+            <!-- <h1 class="m-0">Data Karyawan</h1> -->
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -41,13 +41,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.content-header -->
 
     <!-- Main content -->
-        <div class="container ">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-9">
             <div class="card mt-3">
             <div class="card-header">
                     <div class="pull-left">
-                      <strong><h5>Detail Data</h5></strong>
+                      <strong><h5><center>Detail Data Karyawan</center></h5></strong>
                     </div>
-                </div>
+            </div>
                 <div class="card-body">
                    <br/>
                         <form method="post" action="/karyawan/index">
@@ -142,6 +144,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </form>
                 </div>
             </div>
+          </div>
+          </div>
         </div>
     <!-- /.content-wrapper -->
 

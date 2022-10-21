@@ -46,12 +46,11 @@ class PenggajianController extends Controller
           
         $message = ([
             'required' =>  "Data Tidak Boleh Kosong!",
-            'unique' => "ID Sudah Terdata"
         ]);
 
         $this->validate($request,[
            
-            'nip' => 'required|unique:penggajian,nip',
+            'nip' => 'required',
             'jumlah_hadir' => 'required|numeric',
             'jumlah_izin' => 'required|numeric',
             'jumlah_sakit' => 'required|numeric',

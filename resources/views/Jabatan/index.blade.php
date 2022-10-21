@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Jabatan</h1>
+            <h1 class="m-0 font-weight-light">Data Jabatan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <!-- <ol class="breadcrumb float-sm-right">
@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
         <div class="container">
-              <div class="card card-lightblue card-outline mt-3">
+              <div class="card card-olive card-outline mt-3">
                   <!-- <div class="card-header mt-2">
                     <div class="col-6">
                       <strong><h5>Data Jabatan</h5></strong>
@@ -66,11 +66,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div> -->
                   
                   <div class="card-body">
-                  <a href="/jabatan/tambah" class="btn btn-sm btn-primary  float-left mb-3"><i class="fa fa-plus"></i> Add</a>
+                  <a href="/jabatan/tambah" class="btn btn-sm btn-primary  float-left mb-3"><i class="fa fa-plus"></i> Tambah</a>
                       <br/>
-                      <table class="table table-bordered table-hover table-striped">
+                      <table class="table table-bordered table-hover table-striped  ">
                           <thead>
-                              <tr class="table-primary">
+                              <tr class="table-secondary">
                                   <th>No</th>
                                   <th>Jabatan</th>
                                   <th colspan="3" style="text-align:center;">OPSI</th>
@@ -84,9 +84,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 
                                   <td style="text-align:center;">
                                     <!-- <a href="/jabatan_detail/{{ $p->id_jabatan}}" class="btn btn-sm btn-default"><i class="fa fa-dollar-sign"></i></a> -->
-                                    <a href="/jabatan_detail/jabatan/{{ $p->id_jabatan}}" class="btn btn-sm btn-info"><i class="fa fa-dollar-sign"></i></a>
-                                    <a href="/jabatan/edit/{{ $p->id_jabatan}}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                                    <a href="/jabatan/delete/{{ $p->id_jabatan}}" class="btn btn-sm btn-danger " onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
+                                    <a href="/jabatan_detail/jabatan/{{ $p->id_jabatan}}" class="btn btn-sm btn-info"><i class="fa fa-dollar-sign" data-toggle="tooltip" title="Rincian"></i></a>
+                                    <a href="/jabatan/edit/{{ $p->id_jabatan}}" class="btn btn-sm btn-warning" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></a>
+                                    <a href="/jabatan/delete/{{ $p->id_jabatan}}" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Hapus" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
                                   </td>
                               </tr>
                               @endforeach

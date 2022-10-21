@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Detail Penggajian</h1>
+            <h1 class="m-0"></h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -43,112 +43,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     
-                    <form method="post" action="/penggajian_detail/store">
- 
-                        {{ csrf_field() }}
-
-                        <!-- <div class="form-group">
-                            <label for="id_penggajian">NIP</label>
-                            <select class="form-control" id="id_penggajian" name="id_penggajian" >
-                                <option selected>Pilih </option>
-                                @foreach($penggajian as $item)
-                                <option value="{{ $item->id_penggajian }}">{{ $item->nip}}</option>    
-                                @endforeach  
-                            </select>  
- 
-                            @if($errors->has('id_penggajian'))
-                                <div class="text-danger">
-                                    {{ $errors->first('id_penggajian')}}
-                                </div>
-                            @endif
-                        </div>
-
- 
-                        <div class="form-group">
-                            <label>Jenis Gaji</label>
-                            <select class="form-control" id="id_jenis_gaji" name="id_jenis_gaji" >
-                                <option selected>Pilih Jenis Gaji</option>
-                                @foreach($jenis_gaji as $item)
-                                <option value="{{ $item->id_jenis_gaji }}">{{ $item->nama }}</option>    
-                                @endforeach  
-                            </select>  
-                            @if($errors->has('id_jenis_gaji'))
-                                <div class="text-danger">
-                                    {{ $errors->first('id_jenis_gaji')}}
-                                </div>
-                            @endif
-                        </div>
-                        <div class="form-group">
-                            <label>Nominal</label>
-                            <input type="text" name="nominal" class="form-control" placeholder="Nominal">
- 
-                            @if($errors->has('nominal'))
-                                <div class="text-danger">
-                                    {{ $errors->first('nominal')}}
-                                </div>
-                            @endif
-                        </div>
-                        <button type="submit" class="btn btn-sm btn-success float-right"><i class="fa fa-plus"></i> Add</button> -->
-                                <div class="container">
-                                    <div class="card card-primary card-outline mt-4">
-                                        <!-- <div class="card-header text-center">
-                                            Tabel Penggajian
-                                        </div> -->
-                                        <div class="card-body">
-                                                <div class="card-tools">
-                                                    <a href="/penggajian_detail/cetak/{{$id}}" class="btn btn-sm btn-primary float-left mb-3 mr-3"><i class="fa fa-print"></i>  Cetak</a>
-                                                    <a href="/penggajian" class="btn btn-sm btn-success mb-3">Kembali</a>
-                                                    <br/>
-                                                </div>
-                                        <table>
-                                            <tr>
-                                                <td>Nama</td>
-                                                <td>:</td>
-                                                <td>{{$arrayResult[0]}}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>NIP</td>
-                                                <td>:</td>
-                                                <td>{{$arrayResult[1]}}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bonus Gaji</td>
-                                                <td>:</td>
-                                                <td>{{$arrayResult[2]}}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pengurangan Gaji</td>
-                                                <td>:</td>
-                                                <td>{{$arrayResult[3]}}</td>
-                                            </tr>
-                                        </table>
-                                        <!-- seacrch -->
-                                        <table class="table table-bordered table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>NO.</th>
-                                                    <th>Keterangan</th>
-                                                    <th>Nominal</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php 
-                                                    $no = 1;
-                                                    $getData = $arrayResult[5];
-                                                ?>
-                                                @foreach ($getData as $value)
-                                                        <tr>
-                                                            <td>{{$no++}}</td>
-                                                            <td>{{$value['jenis_gaji']}}</td>
-                                                            <td>{{$value['nominal']}}</td>
-                                                        </tr>
-                                                @endforeach
-                                                <tr>
-                                                    <td colspan="2">Total</td>
-                                                    <td>{{$arrayResult[4]}}</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+    <form>                
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-9">
+              <div class="card card-olive card-outline mt-2">
+                  <div class="card-header text-center">
+                    Slip Gaji
+                  </div>
+                <div class="card-body">
+                    <div class="card-tools">
+                        <!-- <a href="/penggajian_detail/cetak/{{$id}}" class="btn btn-sm btn-primary float-left mb-3 mr-3"><i class="fa fa-print"></i>  Cetak</a> -->
+                        <!-- <a href="/penggajian" class="btn btn-sm btn-success mb-3">Kembali</a> -->
+                    </div>
+                    <div class="mt-20">
+                        <label  class="col-sm-4 col-form-label">Nama </label>
+                        <b>:</b> {{$arrayResult[0]}}
+                    </div>
+                    <div class="mt-10">
+                        <label  class="col-sm-4 col-form-label">NIP </label>
+                        <b>:</b> {{$arrayResult[1]}}
+                    </div>
+                    <div class="mt-10">
+                        <label  class="col-sm-4 col-form-label">Bonus Gaji </label>
+                        <b>:</b> {{$arrayResult[2]}}
+                    </div>
+                    <div class="mt-10">
+                        <label  class="col-sm-4 col-form-label">Pengurangan </label>
+                        <b>:</b> {{$arrayResult[3]}}
+                    </div>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>NO.</th>
+                                <th>Keterangan</th>
+                                <th>Nominal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                                $no = 1;
+                                $getData = $arrayResult[5];
+                            ?>
+                            @foreach ($getData as $value)
+                                    <tr>
+                                        <td>{{$no++}}</td>
+                                        <td>{{$value['jenis_gaji']}}</td>
+                                        <td>{{$value['nominal']}}</td>
+                                    </tr>
+                            @endforeach
+                            <tr>
+                                <td colspan="2"><b>Total</b></td>
+                                <td>{{$arrayResult[4]}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="text-align:center;"><a href="/penggajian" class="btn btn-sm mb-3">Kembali</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                                         <!--
                                             <table class="table table-bordered table-hover table-striped">
                                                 <thead>
@@ -181,13 +133,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     @endforeach
                                                 </tbody>
                                             </table> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                                            </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+          window.print();
+        </script>
+    </form>
                             
-        
-
     <!-- bagian tabel -->
        
     <!-- /.content-wrapper -->

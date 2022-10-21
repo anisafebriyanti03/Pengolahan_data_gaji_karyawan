@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Jabatan</h1>
+            <!-- <h1 class="m-0">Data Jabatan</h1> -->
           </div>
           <!-- /.col -->
           <!-- <div class="col-sm-6">
@@ -49,7 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div> -->
                 <div class="card-header pull-left">
                     <!-- <div class="pull-left"> -->
-                      <strong><h5>Tambah</h5></strong>
+                      <strong><h5><center>Tambah Data Jabatan</center></h5></strong>
                     <!-- </div> -->
                 </div>
                 <div class="card-body ">

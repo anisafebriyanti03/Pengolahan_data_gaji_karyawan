@@ -44,7 +44,7 @@
               <div class="container-fluid">
                 <div class="row mb-2 mt-2">
                   <div class="col-sm-6">
-                    <h1 class="m-0">Data Karyawan</h1>
+                    <h1 class="m-0 font-weight-light">Data Karyawan</h1>
                   </div>
                   <!-- /.col -->
                   <div class="col-sm-6">
@@ -60,17 +60,17 @@
 
             <!-- Main content -->
                 <div class="container">
-                    <div class="card card-primary card-outline mt-3">
+                    <div class="card card-olive card-outline mt-3">
                           <div class="card-header">
                             <!-- <div class="pull-left"> -->
                               <!-- <strong><h5>Data Karyawan</h5></strong> -->
-                              <a href="/karyawan/tambah" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>  Add</a>
+                              <a href="/karyawan/tambah" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>  Tambah</a>
                             <!-- </div> -->
                           </div>
                         <div class="card-body">
                             <table class="table table-bordered table-hover table-striped" id="table-data">
                                 <thead>
-                                    <tr class="table-primary">
+                                    <tr class="table-secondary">
                                         <th>No</th>
                                         <th>NIP</th>
                                         <th>Nama Karyawan</th>
@@ -92,9 +92,9 @@
                                         <td >{{ $p->jabatan->nm_jabatan }}</td>
                                         <!-- <td>{{ $p->tipe }}</td> -->
                                         <td style="text-align:center;">
-                                            <a href="/karyawan/detail/{{ $p->nip}}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
-                                            <a href="/karyawan/edit/{{ $p->nip}}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                                            <a href="/karyawan/delete/{{ $p->nip}}" class="btn btn-sm btn-danger" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
+                                            <a href="/karyawan/detail/{{ $p->nip}}" class="btn btn-sm btn-success"><i class="fa fa-eye" data-toggle="tooltip" title="Detail"></i></a>
+                                            <a href="/karyawan/edit/{{ $p->nip}}" class="btn btn-sm btn-warning" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></a>
+                                            <a href="/karyawan/delete/{{ $p->nip}}" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Hapus" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

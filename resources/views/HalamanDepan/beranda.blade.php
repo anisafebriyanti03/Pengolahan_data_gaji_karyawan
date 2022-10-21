@@ -25,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Pengolahan Gaji Karyawan</h1>
+            <h1 class="m-0 font-weight-light">Pengolahan Gaji Karyawan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box percobaan -->
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box shadow">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-tasks"></i></span>
+              <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-tasks"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Jenis Gaji</span>
@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box shadow">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
+              <span class="info-box-icon bg-purple elevation-1"><i class="fas fa-user-plus"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Jabatan</span>
@@ -90,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box shadow">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
+              <span class="info-box-icon bg-teal elevation-1"><i class="fas fa-users"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Karyawan</span>
@@ -104,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box shadow">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-cog"></i></span>
+              <span class="info-box-icon bg-indigo elevation-1"><i class="fas fa-cog"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Penggajian</span>

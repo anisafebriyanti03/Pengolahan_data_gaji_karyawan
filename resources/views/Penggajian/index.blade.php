@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Penggajian</h1>
+            <h1 class="m-0 font-weight-light">Data Penggajian</h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -59,14 +59,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
         <div class="container">
-            <div class="card  card-primary card-outline mt-3">
+            <div class="card card-olive card-outline mt-3">
                 <div class="card-header ">
-                    <a href="/penggajian/tambah" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>  Add</a>
+                    <a href="/penggajian/tambah" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>  Tambah</a>
                   </div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover table-striped" id="table-data">
                         <thead>
-                            <tr class="table-primary">
+                            <tr class="table-secondary">
                                 <th>No</th>
                                 <th>Nama Karyawan</th>
                                 <th>Bulan</th>
@@ -97,10 +97,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>Rp.{{ number_format($p->total) }} </td>
                                 <td style="text-align:center;">
                                     <!-- <a href="/penggajian_detail/penggajian/{{ $p->id_penggajian}}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> </a> -->
-                                    <a href="/penggajian_detail/penggajian/{{ $p->id_penggajian}}" class="btn btn-sm btn-info"><i class="fa fa-print"></i></a>
-                                    <a href="/penggajian/detail/{{ $p->id_penggajian}}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> </a>
+                                    <a href="/penggajian_detail/penggajian/{{ $p->id_penggajian}}" class="btn btn-sm btn-info" data-toggle="tooltip" title="Cetak"><i class="fa fa-print"></i></a>
+                                    <a href="/penggajian/detail/{{ $p->id_penggajian}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="Detail"><i class="fa fa-eye"></i> </a>
                                     <!-- <a href="/penggajian/edit/{{ $p->id_penggajian}}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a> -->
-                                    <a href="/penggajian/delete/{{ $p->id_penggajian}}" class="btn btn-sm btn-danger" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
+                                    <a href="/penggajian/delete/{{ $p->id_penggajian}}" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Hapus" onClick="return confirm('Yakin ingin Hapus?')"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach 

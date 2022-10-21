@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2 mt-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Jabatan</h1>
+            <!-- <h1 class="m-0">Data Jabatan</h1> -->
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -44,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container">
             <div class="card mt-3">
               <div class="card-header pull-left ">  
-                <strong><h5>Edit Data</h5></strong>     
+                <strong><h5><center>Edit Data Jabatan</center></h5></strong>     
               </div>
                 <div class="card-body">
                     <form method="post" action="/jabatan/update/{{ $jabatan->id_jabatan}}">
@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         {{ method_field('PUT') }}
 
                         <div class="form-group">
-                            <label>Jabatan</label>
+                            <label>Nama Jabatan</label>
                             <input type="text" name="nm_jabatan" class="form-control" placeholder="Nama Jabatan" value="{{ $jabatan->nm_jabatan }}">
  
                             @if($errors->has('nm_jabatan'))

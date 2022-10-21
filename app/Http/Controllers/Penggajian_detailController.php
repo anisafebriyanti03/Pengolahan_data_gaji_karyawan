@@ -58,7 +58,6 @@ class Penggajian_detailController extends Controller
     	$penggajian_detail = Penggajian_detail::where('id_penggajian',$id_penggajian)->get();
         
     	return view('penggajian_detail.cetak',compact('penggajian_detail', 'penggajian','jenis_gaji'));
-        
     }
 
     // public function tambah()
