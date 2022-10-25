@@ -70,7 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="form-group">
                                     <label for="id_jabatan">Jabatan</label>
                                     <select class="form-control" id="id_jabatan" name="id_jabatan">
-                                        <option selected>Pilih Jabatan</option>
+                                        <option value="">Pilih Jabatan</option>
                                             @foreach($jabatan as $item)
                                                 <option value="{{ $item->id_jabatan }}">{{ $item->nm_jabatan }}</option>
                                             @endforeach

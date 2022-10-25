@@ -226,10 +226,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-header col-lg-5 col-10">
                 <h3 class="card-title">Jenis Kelamin</h3>
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
                     <i class="fas fa-times"></i>
                   </button> -->
                 </div>

@@ -35,7 +35,7 @@ Route::get('/logout','LoginController@logout')->name('logout');
 
 
 //Route jabatan
-Route::get('/jabatan', 'JabatanController@index')->name('jabatan');
+Route::get('/jabatan', 'JabatanController@index')->name('jabatan')->middleware('auth');
 Route::get('/jabatan/tambah', 'JabatanController@tambah');
 Route::post('/jabatan/store', 'JabatanController@store');
 Route::put('/jabatan/update/{id_jabatan}', 'JabatanController@update');
@@ -56,7 +56,7 @@ Route::get('/jabatan_detail/delete/{id}/{id_jabatan}', 'jabatan_detailController
 Route::get('/jabatan_detail/detail/{id}', 'jabatan_detailController@detail');
 
 //Route Karyawan
-Route::get('/karyawan', 'KaryawanController@index')->name('karyawan');
+Route::get('/karyawan', 'KaryawanController@index')->name('karyawan')->middleware('auth');
 Route::get('/karyawan/tambah', 'KaryawanController@tambah');
 Route::post('/karyawan/store', 'KaryawanController@store');
 Route::put('/karyawan/update/{nip}', 'KaryawanController@update');
@@ -65,7 +65,7 @@ Route::get('/karyawan/delete/{nip}', 'KaryawanController@delete');
 Route::get('/karyawan/detail/{nip}', 'KaryawanController@detail');
 
 //Route Jenis Gaji
-Route::get('/jenis_gaji', 'Jenis_gajiController@index')->name('jenis_gaji');
+Route::get('/jenis_gaji', 'Jenis_gajiController@index')->name('jenis_gaji')->middleware('auth');
 Route::get('/jenis_gaji/tambah', 'Jenis_gajiController@tambah');
 Route::post('/jenis_gaji/store', 'Jenis_gajiController@store');
 Route::get('/jenis_gaji/edit/{id_jenis_gaji}', 'Jenis_gajiController@edit');
@@ -74,7 +74,7 @@ Route::get('/jenis_gaji/detail/{id_jenis_gaji}', 'Jenis_gajiController@detail');
 Route::get('/jenis_gaji/delete/{id_jenis_gaji}', 'Jenis_gajiController@delete');
 
 //Route Penggajian
-Route::get('/penggajian', 'PenggajianController@index')->name('penggajian');
+Route::get('/penggajian', 'PenggajianController@index')->name('penggajian')->middleware('auth');
 Route::get('/penggajian/tambah', 'PenggajianController@tambah');
 Route::get('/penggajian/tambah/{id_karyawan}', 'PenggajianController@tambah');
 Route::post('/penggajian/store', 'PenggajianController@store');

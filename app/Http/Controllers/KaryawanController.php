@@ -28,9 +28,9 @@ class KaryawanController extends Controller
 
     public function store(Request $request)
     {
-        $message = ([
-            'required' => "Data Tidak Boleh Kosong!",
-        ]);
+        $message = [
+            'required' => 'Data tidak boleh kosong!',
+        ];
 
         $this->validate($request,[
             'nip' => 'required|integer|unique:karyawan,nip',
