@@ -8,7 +8,7 @@ class Karyawan extends Model
 {
     public $timestamps = false;
     protected $table = "karyawan";
-    protected $fillable = ['nip','id_jabatan','nik','nama','tmpt_lahir','tgl_lahir','alamat','jenkel','no_tlpn','email','tgl_masuk','tgl_resign'];
+    protected $fillable = ['nip','id_jabatan','nik','nama','tmpt_lahir','tgl_lahir','alamat','jenkel','no_tlpn','email','tgl_masuk'];
     protected $primaryKey = "nip";
 
     public function jabatan()

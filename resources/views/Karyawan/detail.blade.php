@@ -132,12 +132,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             </div>
 
-                            <div class="mb-3 row">
+                            <!-- <div class="mb-3 row">
                               <label for="tgl_resign" class="col-sm-2 col-form-label">Tanggal Resign</label>
                                 <div class="col-sm-10">
                                   <b>:</b> {{ $karyawan->tgl_resign }}
                                 </div>
-                            </div>
+                            </div> -->
                                 <div class="col-sm-10 offset-sm-2 mb-2 mt-2">
                                   <a href="/karyawan" class="btn btn-sm btn-success">Kembali</a>
                                 </div>

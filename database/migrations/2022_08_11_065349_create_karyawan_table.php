@@ -25,7 +25,6 @@ class CreateKaryawanTable extends Migration
             $table->string('no_tlpn',20);
             $table->string('email',100)->unique();
             $table->date('tgl_masuk');
-            $table->date('tgl_resign')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

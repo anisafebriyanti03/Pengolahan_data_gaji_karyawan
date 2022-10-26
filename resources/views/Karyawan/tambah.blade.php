@@ -211,7 +211,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             </div>
                             
-                            <div class="col-md">
+                            <!-- <div class="col-md">
                                 <div class="form-group">
                                     <label>Tanggal Resign</label>
                                     <input type="date" name="tgl_resign" class="form-control"  value="{{old('tgl_resign')}}">
@@ -222,13 +222,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </div>
                                     @endif
                                 </div>
+                            </div> -->
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+                                    <a href="/karyawan" class="btn btn-sm btn-success">Kembali</a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
-                            <a href="/karyawan" class="btn btn-sm btn-success">Kembali</a>
-                        </div>
+                       
  
                     </form>
                 </div>

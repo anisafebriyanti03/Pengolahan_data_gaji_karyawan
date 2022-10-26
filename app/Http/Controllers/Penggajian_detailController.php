@@ -22,6 +22,8 @@ class Penggajian_detailController extends Controller
         $details = [];
         $nama_karyawan = "";
         $nip_karyawan = "";
+        $bulan_karyawan = "";
+        $tahun_karyawan = "";
         $bonus_karyawan = "";
         $pengurangan_gaji = "";
         $total_gaji = "";
@@ -29,6 +31,8 @@ class Penggajian_detailController extends Controller
         foreach($penggajian_detail as $pd => $p) {
             $nama_karyawan = $details[$pd]['nama'] = $p->penggajian->karyawan->nama ?? '';
             $nip_karyawan = $details[$pd]['nip'] = $p->penggajian->nip ?? '';
+            $bulan_karyawan = $details[$pd]['bulan_penggajian'] = $p->penggajian->bulan_penggajian ?? '';
+            $tahun_karyawan = $details[$pd]['tahun_penggajian'] = $p->penggajian->tahun_penggajian ?? '';
             $bonus_karyawan = $details[$pd]['bonus'] = $p->penggajian->bonus ?? '';
             $pengurangan_gaji = $details[$pd]['pengurangan'] = $p->penggajian->pengurangan ?? 0;
             $total_gaji = $details[$pd]['total'] = $p->penggajian->total ?? 0;
@@ -41,11 +45,15 @@ class Penggajian_detailController extends Controller
             [
                 $nama_karyawan,
                 $nip_karyawan,
+                $bulan_karyawan,
+                $tahun_karyawan,
                 $bonus_karyawan,
                 $pengurangan_gaji,
                 $total_gaji,
                 $dataPenggajian
             ];
+
+            // dd($arrayResult);
 
         return view('penggajian_detail.index',compact('penggajian','jenis_gaji','penggajian_detail','id','details','arrayResult'));
     }

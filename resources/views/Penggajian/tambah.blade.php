@@ -260,12 +260,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         
         $('#pengurangan').val(alfa);
 
-        total = total + bonus - pengurangan - alfa
+        total = total + bonus - alfa
 
         $('#total').val(total)
     }
-
-
 
     function getTotalHadir(alfa) {
         let dates = new Date();

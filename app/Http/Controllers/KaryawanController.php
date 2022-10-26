@@ -44,7 +44,7 @@ class KaryawanController extends Controller
             'no_tlpn' => 'required',
             'email' => 'required',
             'tgl_masuk' => 'required',
-            'tgl_resign' => 'nullable|after:tgl_masuk'
+            // 'tgl_resign' => 'nullable|after:tgl_masuk'
         ], $message);
 
         Karyawan::create([
@@ -59,7 +59,7 @@ class KaryawanController extends Controller
             'no_tlpn' => $request->no_tlpn,
             'email' => $request->email,
             'tgl_masuk' => $request->tgl_masuk,
-            'tgl_resign' => $request->tgl_resign
+            // 'tgl_resign' => $request->tgl_resign
             // $request->all()
         ]);
         return redirect('/karyawan')->with('Data ditambah','Data berhasil ditambah!');
@@ -98,7 +98,7 @@ class KaryawanController extends Controller
             'no_tlpn' => 'required',
             'email' => 'required|email',
             'tgl_masuk' => 'required',
-            'tgl_resign' => 'nullable|after:tgl_masuk'
+            // 'tgl_resign' => 'nullable|after:tgl_masuk'
         ], $message);
     
         Karyawan::where('nip',$id)->update([
@@ -113,7 +113,7 @@ class KaryawanController extends Controller
             'no_tlpn' => $request->no_tlpn,
             'email' => $request->email,
             'tgl_masuk' => $request->tgl_masuk,
-            'tgl_resign' => $request->tgl_resign
+            // 'tgl_resign' => $request->tgl_resign
         ]);
 
         return redirect('/karyawan')->with('Data diedit','Data berhasil diedit!');

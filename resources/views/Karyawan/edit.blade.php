@@ -231,7 +231,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             </div>
 
-                            <div class="col-md">
+                            <!-- <div class="col-md">
                                 <div class="form-group">
                                     <label>Tanggal Resign</label>
                                     <input type="date" name="tgl_resign" class="form-control" placeholder="Tanggal Resign" value="{{ $karyawan->tgl_resign }}">
@@ -242,7 +242,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </div>
                                     @endif
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="form-group mt-3">

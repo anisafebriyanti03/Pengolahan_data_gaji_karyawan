@@ -48,29 +48,60 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="row justify-content-center">
             <div class="col-md-9">
               <div class="card card-olive card-outline mt-2">
-                  <div class="card-header text-center">
-                    Slip Gaji
+                  <div class="card-header text-center font-weight-light">
+                    Slip Gaji Karyawan
                   </div>
                 <div class="card-body">
                     <div class="card-tools">
                         <!-- <a href="/penggajian_detail/cetak/{{$id}}" class="btn btn-sm btn-primary float-left mb-3 mr-3"><i class="fa fa-print"></i>  Cetak</a> -->
                         <!-- <a href="/penggajian" class="btn btn-sm btn-success mb-3">Kembali</a> -->
                     </div>
-                    <div class="mt-20">
-                        <label  class="col-sm-4 col-form-label">Nama </label>
-                        <b>:</b> {{$arrayResult[0]}}
+                    <div class="row">
+                      <div class="col-md">
+                        <div class="mt-20">
+                            <label  class="col-sm-5 col-form-label">Nama </label>
+                            <b>:</b> {{$arrayResult[0]}}
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="mt-10">
+                            <label  class="col-sm-5 col-form-label">Bulan </label>
+                            <?php 
+                              $month_num = $arrayResult[2];
+
+                              $month_name = date("F", mktime(0, 0, 0, (int) $month_num, 10));
+                            ?>
+                            <b>:</b> {{$month_name}} 
+                        </div>
+                      </div>
                     </div>
-                    <div class="mt-10">
-                        <label  class="col-sm-4 col-form-label">NIP </label>
-                        <b>:</b> {{$arrayResult[1]}}
+                    <div class="row">
+                      <div class="col-md">
+                        <div class="mt-10">
+                            <label  class="col-sm-5 col-form-label">NIP </label>
+                            <b>:</b>  {{$arrayResult[1]}}
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="mt-10">
+                            <label  class="col-sm-5 col-form-label">Tahun </label>
+                            <b>:</b> {{$arrayResult[3]}}
+                        </div>
+                      </div>
                     </div>
-                    <div class="mt-10">
-                        <label  class="col-sm-4 col-form-label">Bonus Gaji </label>
-                        <b>:</b> {{$arrayResult[2]}}
-                    </div>
-                    <div class="mt-10">
-                        <label  class="col-sm-4 col-form-label">Pengurangan </label>
-                        <b>:</b> {{$arrayResult[3]}}
+                    <div class="row">
+                      <div class="col-md">
+                        <div class="mt-10">
+                            <label  class="col-sm-5 col-form-label">Bonus Gaji </label>
+                            <b>:</b> {{$arrayResult[4]}}
+                        </div>
+                      </div>
+                      <div class="col-md ">
+                        <div class="mt-10">       
+                            <label  class="col-sm-5 col-form-label">Pengurangan </label>
+                            <b>:</b> {{$arrayResult[5]}}
+                        </div>
+                      </div>
                     </div>
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
@@ -83,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <tbody>
                             <?php 
                                 $no = 1;
-                                $getData = $arrayResult[5];
+                                $getData = $arrayResult[7];
                             ?>
                             @foreach ($getData as $value)
                                     <tr>
@@ -94,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @endforeach
                             <tr>
                                 <td colspan="2"><b>Total</b></td>
-                                <td>{{$arrayResult[4]}}</td>
+                                <td>{{$arrayResult[6]}}</td>
                             </tr>
                             <tr>
                                 <td colspan="3" style="text-align:center;"><a href="/penggajian" class="btn btn-sm mb-3">Kembali</a></td>
